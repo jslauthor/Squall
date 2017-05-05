@@ -1,20 +1,14 @@
-<img src="http://marcuseckert.com/squallSandbox/images/logoBlack.svg" width="50" />
-# Squall
-This repository contains the latest version of the Squall SDK as well as After Effects and Xcode projects to help better understand it.
-Some examples will also have a companion tutorial explaining some concepts in detail.
+# React Squall
 
-**Note:** You will need a Squall license to properly run these examples. Learn more at [Squall.no](https://www.squall.no).
+### Setup
 
-### [Spinner](http://marcuseckert.com/squall/tutorials/spinner)
-Learn how to create a spinner in After Effects and use the SLCoreAnimationBuildDelegate to manipulate the animations as they are being built.
+1. Add the node-modules/ios/RNSquall.xcodeproject xcode project to `Libraries` of your react native project
+2. Add `libRNSquall.a` to Linked Frameworks and Libraries
+3. Add `Squall.framework` to the parent react-native projects from node-modules/react-squall/ios (create a Frameworks group, if desired)
+4. Add `Squall.framework` to _Embedded Binaries_ under General
+5. Add `($SRCROOT)/../node-modules/react-squall/` to Framework Headers in Build Settings
+6. Don't forget to add a `Squall License` key-value pair to your project's info.plist
 
-![Spinner][spinner]
-[spinner]: http://marcuseckert.com/squallSandbox/images/spinner.gif "Spinner"
-[more...](http://marcuseckert.com/squall/tutorials/spinner)
+### Animations
 
-### [Adaptive Transition](http://marcuseckert.com/squall/tutorials/transition)
-Learn how to create a transition in After Effects, swap out AE layers with already existing ones, prevent select properties from being evaluated and how to adapt animations to different screen sizes.
-
-<img src="http://marcuseckert.com/squallSandbox/images/transition.gif" />
-
-[more...](http://marcuseckert.com/squall/tutorials/transition)
+Animations needs to be bundled with the parent react-native project
